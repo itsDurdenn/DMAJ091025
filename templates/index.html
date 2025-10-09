@@ -1,0 +1,21 @@
+{% extends "Base.html"%}
+
+{% block contenido %}
+<p>
+    Descubre la grandeza del mundo: explora las maravillas más impresionantes
+    creadas por la naturaleza y el ser humano, conoce animales exóticos que
+    habitan los rincones más sorprendentes del planeta y admira la belleza de los
+    autos antiguos que marcaron historia. En esta página encontrarás un viaje
+    lleno de curiosidades, imágenes impactantes y datos fascinantes que te harán
+    ver el mundo con nuevos ojos.
+</p>
+<div>
+    <img src="{{ url_for('static', filename = 'img/misubishi.jpg') }}"
+    alt="Carro Misubishi"
+    />
+    <img
+    src="{{ url_for('static', filename='img/langosta_(1).jpg') }}"
+    alt="Langosta Azul"
+    />
+</div>
+{% endblock contenido%}

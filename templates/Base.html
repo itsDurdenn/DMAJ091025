@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block titulo %}{%endblock titulo%}</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <h1 class="text-center">Desarrollo de Plantilla Base</h1>
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/animales">Animales Exoticos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/vehiculos">Vehiculos Antiguos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/maravillas">Las Maravillas del Mundo</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/acerca">Acerca de...</a>
+      </li>
+    </ul>
+    <section>
+    {%block contenido%} 
+    {%endblock %}
+    </section>
+    <p>
+      © 2025 | Explorando lo Extraordinario Descubre la belleza de los animales
+      exóticos, la historia detrás de los vehículos antiguos y la grandeza de
+      las maravillas del mundo. Un viaje por la naturaleza, el tiempo y las
+      obras más asombrosas creadas por el ser humano.
+    </p>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
