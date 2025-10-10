@@ -1,5 +1,67 @@
 {% extends "Base.html"%}
 
-{%  block contenid %}
+{%  block contenido %}
+<h2 class="text-center"> Vehiculos Antiguos</h2>
+<h3>Nacimiento de los Vehiculos</h3>
+<p>
+    Los vehículos antiguos, también conocidos como autos clásicos o vintage, son aquellos que fueron fabricados en
+    épocas pasadas y que han perdurado a lo largo del tiempo debido a su diseño, ingeniería y valor histórico. Estos
+    vehículos suelen ser apreciados por coleccionistas y entusiastas del automovilismo, ya que representan una era
+    específica de la historia del automóvil y reflejan las tendencias y avances tecnológicos de su época.
+</p>
 
-{% endblock contenid %}
+<ol>
+    <li>
+        <h4>Ford Modelo T (1908-1927)</h4>
+        <img src="{{ url_for('static', filename = 'img/ford_modelo_t.webp') }}" alt="Ford Modelo T" />
+        <p>Características Generales:
+            El Ford Modelo T, también conocido como "Tin Lizzie", fue uno de los primeros automóviles producidos en masa
+            y es considerado el primer automóvil asequible para la clase media. Fue diseñado por Henry Ford y su equipo
+            y se fabricó desde 1908 hasta 1927. El Modelo T tenía un motor de cuatro cilindros, una velocidad máxima de
+            72 km/h y un diseño simple pero robusto. Su producción en cadena revolucionó la industria automotriz y
+            permitió que más personas tuvieran acceso a un automóvil.</p>
+    </li>
+    <li>
+        <h4>Chevrolet Bel Air (1950-1975)</h4>
+        <img src="{{ url_for('static', filename = 'img/chevrolet_bel_air.webp') }}" alt="Chevrolet Bel Air" />
+        <p>Características Generales:
+            El Chevrolet Bel Air es un automóvil clásico estadounidense que se produjo desde 1950 hasta 1975. Fue uno de
+            los modelos más populares de Chevrolet y se destacó por su diseño elegante y su estilo distintivo. El Bel Air
+            estaba disponible en varias carrocerías, incluyendo sedán, coupé y convertible. Contaba con motores V8
+            potentes, interiores espaciosos y una suspensión suave, lo que lo convirtió en un automóvil cómodo y
+            atractivo para la época.</p>
+    </li>
+    <li>
+        <h4>Volkswagen Beetle (1938-2003)</h4>
+        <img src="{{ url_for('static', filename = 'img/volkswagen_beetle.jpeg') }}" alt="Volkswagen Beetle" />
+        <p>Características Generales:
+            El Volkswagen Beetle, también conocido como "Escarabajo", es uno de los automóviles más icónicos y
+            reconocibles del mundo. Fue diseñado por Ferdinand Porsche y producido por Volkswagen desde 1938 hasta 2003.
+            El Beetle se caracterizaba por su diseño compacto y redondeado, su motor trasero y su durabilidad. A lo largo
+            de los años, el Beetle se convirtió en un símbolo de la cultura pop y fue especialmente popular durante las
+            décadas de 1960 y 1970. Su producción masiva y su accesibilidad lo convirtieron en uno de los automóviles
+            más vendidos de todos los tiempos.</p>
+    </li>
+    <li>
+        <h4>Cadillac Eldorado (1953-2002)</h4>
+        <img src="{{ url_for('static', filename = 'img/cadillac_eldorado.webp') }}" alt="Cadillac Eldorado" />
+        <p>Características Generales:
+            El Cadillac Eldorado es un automóvil de lujo producido por Cadillac desde 1953 hasta 2002. Fue uno de los
+            modelos más prestigiosos de la marca y se destacó por su diseño elegante, su tecnología avanzada y su
+            rendimiento potente. El Eldorado estaba disponible en varias carrocerías, incluyendo coupé y convertible. A lo
+            largo de los años, el Eldorado incorporó características innovadoras como frenos antibloqueo, control de
+            tracción y sistemas de navegación, lo que lo convirtió en un automóvil de lujo altamente deseado.</p>
+    </li>
+    <li>
+        <h4>Mercedes-Benz 300SL (1954-1963)</h4>
+        <img src="{{ url_for('static', filename = 'img/mercedes_benz_300sl.jpg') }}" alt="Mercedes-Benz 300SL" />
+        <p>Características Generales:
+            El Mercedes-Benz 300SL es un automóvil deportivo de lujo producido por Mercedes-Benz desde 1954 hasta 1963.
+            Fue uno de los primeros automóviles en utilizar puertas de ala de gaviota, lo que le dio un diseño distintivo
+            y elegante. El 300SL estaba equipado con un motor de seis cilindros en línea y una transmisión manual de cuatro
+            velocidades, lo que le permitía alcanzar velocidades impresionantes para su época. Además, el 300SL
+            incorporó tecnología avanzada como inyección de combustible y frenos de disco, lo que lo convirtió en un
+            automóvil altamente deseado por los entusiastas del automovilismo.</p>
+    </li>
+</ol>
+    {% endblock contenido %}
