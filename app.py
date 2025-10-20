@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template,request
 
 app= Flask(__name__)
 
@@ -21,6 +21,14 @@ def vehiculos():
 @app.route('/acerca')
 def acerca():
     return render_template('acerca.html')
+
+@app.route('/signup')
+def sign():
+    return render_template('formulario.html')
+
+@app.route('/signin')
+def signin():
+    return render_template('sesion.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
