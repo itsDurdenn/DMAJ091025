@@ -5,7 +5,6 @@ app= Flask(__name__)
 @app.route('/')
 def inicio():
     return render_template('index.html')
-
 @app.route('/maravillas')
 def maravillas():
     return render_template('maravillas.html')  
@@ -26,8 +25,30 @@ def acerca():
 def sign():
     return render_template('formulario.html')
 
-@app.route('/signin')
+@app.route('/signup')
+def sign():
+    return render_template('formulario.html')
+
+@app.route('/signin', methods=['GET', 'POST'])
 def signin():
+    if request.method == 'POST':
+        nombreCompleto = request.form['nombreCompleto']
+        email = request.form['email']
+        password = request.form['password']
+        confirmPassword = request.form['confirmPassword']
+        fechaNacimiento = request.form['fechaNacimiento']
+        genero = request.form['genero']
+        biografia = request.form['biografia']
+        checkNotificaciones = request.form.get('checkNotificaciones')
+        checkTerminos = request.form.get('checkTerminos')
+        
+        if password != confirmPassword:
+            flash('Las contraseñas no coinciden. Por favor, inténtalo de nuevo.', 'danger')
+            return render_template('sesion.html')
+        
+        session['usuario'] = nombreCompleto
+        flash(f'Inicio de sesión exitoso para el usuario: {nombreCompleto}', 'success')
+        return render_template('sesion.html', nombreCompleto=nombreCompleto, email=email, fechaNacimiento=fechaNacimiento, genero=genero, biografia=biografia, checkNotificaciones=checkNotificaciones, checkTerminos=checkTerminos)
     return render_template('sesion.html')
 
 if __name__ == '__main__':
