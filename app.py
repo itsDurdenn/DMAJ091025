@@ -1,6 +1,7 @@
-from flask import Flask, render_template,request
+from flask import Flask, render_template,request, redirect, url_for,session, flash
 
 app= Flask(__name__)
+app.config['SECRET_KEY'] = 'tu_clave_secreta_aqui'
 
 @app.route('/')
 def inicio():
@@ -25,10 +26,6 @@ def acerca():
 def sign():
     return render_template('formulario.html')
 
-@app.route('/signup')
-def sign():
-    return render_template('formulario.html')
-
 @app.route('/signin', methods=['GET', 'POST'])
 def signin():
     if request.method == 'POST':
@@ -48,8 +45,9 @@ def signin():
         
         session['usuario'] = nombreCompleto
         flash(f'Inicio de sesión exitoso para el usuario: {nombreCompleto}', 'success')
-        return render_template('sesion.html', nombreCompleto=nombreCompleto, email=email, fechaNacimiento=fechaNacimiento, genero=genero, biografia=biografia, checkNotificaciones=checkNotificaciones, checkTerminos=checkTerminos)
+        
+        return redirect(url_for('inicio'))
+    
     return render_template('sesion.html')
-
 if __name__ == '__main__':
     app.run(debug=True)
