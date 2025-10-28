@@ -26,8 +26,8 @@ def acerca():
 def sign():
     return render_template('formulario.html')
 
-@app.route('/signin', methods=['GET', 'POST'])
-def signin():
+@app.route('/login', methods=['GET', 'POST'])
+def login():
     if request.method == 'POST':
         nombreCompleto = request.form['nombreCompleto']
         email = request.form['email']
@@ -41,13 +41,13 @@ def signin():
         
         if password != confirmPassword:
             flash('Las contraseñas no coinciden. Por favor, inténtalo de nuevo.', 'danger')
-            return render_template('sesion.html')
+            return render_template('login.html')
         
         session['usuario'] = nombreCompleto
         flash(f'Inicio de sesión exitoso para el usuario: {nombreCompleto}', 'success')
         
         return redirect(url_for('inicio'))
     
-    return render_template('sesion.html')
+    return render_template('login.html')
 if __name__ == '__main__':
     app.run(debug=True)
