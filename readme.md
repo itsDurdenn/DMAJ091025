@@ -4,7 +4,8 @@ Diaz Martinez Angel Joel
 3-D
 # Especialidad: 
 Programacion
-# Escuela: CETis #61
+# Escuela: 
+CETis #61
 # Fecha: 
 Jueves 9 de Octubre del 2025
 # Mi foto: 
